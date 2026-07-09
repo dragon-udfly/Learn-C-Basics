@@ -2,11 +2,11 @@
 
 int main() {
 
-    float initial_velocity = 0.0;
-    float final_velocity = 3.0;
-    float time_place_A = 2.0;
-    float time_place_B = 3.0;
-    float time_place_C = 2.5;
+    float initial_velocity = 0.0f;
+    float final_velocity = 3.0f;
+    float time_place_A = 2.0f;
+    float time_place_B = 3.0f;
+    float time_place_C = 2.5f;
 
     printf("Initial Velocity: %.1f\n", initial_velocity);
     printf("Final Velocity: %.1f\n", final_velocity);
