@@ -20,5 +20,13 @@ int main() {
     float displacement = ((initial_velocity + final_velocity) / 2) * total_time;
     printf("Displacement: %.1f\n", displacement);
 
+    double mass = 3232.45;
+    double acceleration = 0.023;
+    printf("Mass of The Object: %.1fKg\n", mass);
+    printf("Acceleration of The Object: %.1fms-1\n", acceleration);
+
+    double force = (mass * acceleration);
+    printf("Force on The Object: %.1fN\n", force);
+
     return 0;
 }
