@@ -28,7 +28,7 @@ int main() {
     printf("Area: %d cm2\n", area);
 
     int half_rectangle_width = ceil((width / 2));
-    printf("Half Rectangle Width: %d cm\n", &half_rectangle_width);
+    printf("Half Rectangle Width: %d cm\n", half_rectangle_width);
 
     int half_rectangle_height = ceil((height / 2));
     printf("Half Rectangle Height: %d cm\n", half_rectangle_height);
