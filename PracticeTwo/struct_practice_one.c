@@ -5,12 +5,26 @@ typedef struct {
     int y;
 } Coordinate;
 
+void PrintPoints(Coordinate points[], int size) { 
+    for(int i = 0; i < size; i++) {
+        printf("p%d: (%d, %d) ", i, points[i].x, points[i].y);
+    }
+    printf("\n");
+}
+
 void TranslateBox(Coordinate points[], 
                   int size, 
                   int translation_matrix[]) {
     for(int i = 0; i < size; i++) {
         points[i].x += translation_matrix[0];
         points[i].y += translation_matrix[1];
+    }
+}
+
+void ScaleBox(Coordinate points[], int size, int scale_matrix[]) { 
+    for(int i = 0; i < size; i++) {
+        points[i].x *= scale_matrix[0];
+        points[i].y *= scale_matrix[1];
     }
 }
 
@@ -28,17 +42,17 @@ int main() {
     points[3].y = 2;
 
     printf("Original Points: \n");
-    for(int i = 0; i < 4; i++) {
-        printf("p%d: (%d, %d) ", i, points[i].x, points[i].y);
-    }
-    printf("\n");
+    PrintPoints(points, 4);
 
     int translation_matrix[] = {3, 4};
     TranslateBox(points, 4, translation_matrix);
     printf("Translated Points: \n");
-    for(int i = 0; i < 4; i++) { 
-        printf("p%d: (%d, %d) ", i, points[i].x, points[i].y);
-    }
-    printf("\n");
+    PrintPoints(points, 4);
+
+    int scale_matrix[] = {3, 1}; 
+    ScaleBox(points, 4, scale_matrix);
+    printf("Scalled Points: \n");
+    PrintPoints(points, 4);
+
     return 0;
 }
