@@ -21,7 +21,9 @@ void TranslateBox(Coordinate points[],
     }
 }
 
-void ScaleBox(Coordinate points[], int size, int scale_matrix[]) { 
+void ScaleBox(Coordinate points[], 
+              int size, 
+              int scale_matrix[]) { 
     for(int i = 0; i < size; i++) {
         points[i].x *= scale_matrix[0];
         points[i].y *= scale_matrix[1];
