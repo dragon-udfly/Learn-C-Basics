@@ -10,6 +10,8 @@ int main() {
     int *y; // declare pointer variable to store memory address
     y = &value; // assigning memory address of variable: value
     printf("Address: %x\n", y);
+    // to get the real value of pointed variable
+    printf("Value: %d\n", *y);
 
     return 0;
 }
