@@ -24,6 +24,7 @@ int main(int argc, char* argv) {
     }
     printf("Number of White Spaces: %d\n", white_spaces);
 
+    fclose(file_object); // mendatory
 
-    return 0;
+    return EXIT_SUCCESS;
 }
